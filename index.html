@@ -17,6 +17,7 @@
       <button class="menu-toggle" aria-label="Toggle menu">☰</button>
       <nav id="nav-menu">
         <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#contact" class="nav-cta">Let's Work Together</a>
@@ -112,6 +113,89 @@
       </div>
     </section>
 
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SELECTED PROJECTS</p>
+          <h2>A few things I've shipped.</h2>
+          <p>A look at recent WordPress, WooCommerce and GoHighLevel builds. Click a project for details.</p>
+        </div>
+        <div class="carousel">
+          <button type="button" class="carousel-btn prev" aria-label="Previous project">‹</button>
+          <div class="carousel-track" id="carousel-track">
+            <button type="button" class="project-slide"
+              data-image="assets/img/projects/woo-subscriptions.svg"
+              data-title="WooCommerce Subscription Store Rebuild"
+              data-description="Rebuilt a legacy WooCommerce store around a custom subscriptions and membership flow, cleaning up checkout logic and connecting it to the client's fulfillment and email systems."
+              data-tags="WooCommerce, PHP, REST API, Subscriptions">
+              <img src="assets/img/projects/woo-subscriptions.svg" alt="WooCommerce Subscription Store Rebuild" loading="lazy">
+              <div class="project-slide-info">
+                <h3>Subscription Store Rebuild</h3>
+                <div class="chips"><span>WooCommerce</span><span>PHP</span><span>Subscriptions</span></div>
+              </div>
+            </button>
+            <button type="button" class="project-slide"
+              data-image="assets/img/projects/ghl-funnel.svg"
+              data-title="GoHighLevel Lead Funnel & Automation"
+              data-description="Designed and built a full lead-generation funnel in GoHighLevel, including landing pages, nurture workflows, call tracking and CRM pipeline automation for a local services business."
+              data-tags="GoHighLevel, Funnels, Workflows, Tracking">
+              <img src="assets/img/projects/ghl-funnel.svg" alt="GoHighLevel Lead Funnel & Automation" loading="lazy">
+              <div class="project-slide-info">
+                <h3>Lead Funnel & Automation</h3>
+                <div class="chips"><span>GoHighLevel</span><span>Funnels</span><span>Automation</span></div>
+              </div>
+            </button>
+            <button type="button" class="project-slide"
+              data-image="assets/img/projects/site-recovery.svg"
+              data-title="Compromised Site Recovery & Hardening"
+              data-description="Restored a hacked WordPress site, removed malicious code, patched the vulnerabilities that let it in, and rebuilt the theme with modern security and performance practices."
+              data-tags="Recovery, Security, WordPress, Performance">
+              <img src="assets/img/projects/site-recovery.svg" alt="Compromised Site Recovery & Hardening" loading="lazy">
+              <div class="project-slide-info">
+                <h3>Site Recovery & Hardening</h3>
+                <div class="chips"><span>Recovery</span><span>Security</span><span>WordPress</span></div>
+              </div>
+            </button>
+            <button type="button" class="project-slide"
+              data-image="assets/img/projects/lms-plugin.svg"
+              data-title="Custom LMS Plugin for Online Courses"
+              data-description="Built a custom WordPress plugin powering a cohort-based course platform, with progress tracking, drip content, quizzes and a member dashboard tailored to the client's curriculum."
+              data-tags="WordPress, Custom Plugin, PHP, JavaScript">
+              <img src="assets/img/projects/lms-plugin.svg" alt="Custom LMS Plugin for Online Courses" loading="lazy">
+              <div class="project-slide-info">
+                <h3>Custom LMS Plugin</h3>
+                <div class="chips"><span>WordPress</span><span>Custom Plugin</span><span>PHP</span></div>
+              </div>
+            </button>
+            <button type="button" class="project-slide"
+              data-image="assets/img/projects/marketplace.svg"
+              data-title="Multi-Vendor Marketplace Integration"
+              data-description="Turned a single-vendor WooCommerce store into a multi-vendor marketplace, with vendor onboarding, split payouts and inventory sync across third-party supplier APIs."
+              data-tags="WooCommerce, Marketplace, APIs, Payments">
+              <img src="assets/img/projects/marketplace.svg" alt="Multi-Vendor Marketplace Integration" loading="lazy">
+              <div class="project-slide-info">
+                <h3>Multi-Vendor Marketplace</h3>
+                <div class="chips"><span>WooCommerce</span><span>APIs</span><span>Payments</span></div>
+              </div>
+            </button>
+            <button type="button" class="project-slide"
+              data-image="assets/img/projects/booking-sync.svg"
+              data-title="Booking & CRM Sync Automation"
+              data-description="Connected an online booking system to the client's CRM and calendar tools via webhooks, eliminating manual data entry and syncing appointments, reminders and follow-ups automatically."
+              data-tags="Automation, Webhooks, APIs, CRM">
+              <img src="assets/img/projects/booking-sync.svg" alt="Booking & CRM Sync Automation" loading="lazy">
+              <div class="project-slide-info">
+                <h3>Booking & CRM Sync</h3>
+                <div class="chips"><span>Automation</span><span>Webhooks</span><span>CRM</span></div>
+              </div>
+            </button>
+          </div>
+          <button type="button" class="carousel-btn next" aria-label="Next project">›</button>
+        </div>
+        <p class="contact-note">Project screenshots and descriptions are placeholders — swap in real case studies, images and links.</p>
+      </div>
+    </section>
+
     <section id="services" class="section dark-section">
       <div class="container">
         <div class="section-heading">
@@ -174,6 +258,19 @@
       <span>WordPress Developer • Technical Architect</span>
     </div>
   </footer>
+
+  <div class="modal" id="project-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button type="button" class="modal-close" data-close aria-label="Close">✕</button>
+      <img class="modal-image" id="modal-image" src="" alt="">
+      <div class="modal-body">
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+        <div class="chips" id="modal-tags"></div>
+      </div>
+    </div>
+  </div>
 
   <script src="assets/js/main.js"></script>
 </body>
