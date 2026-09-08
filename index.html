@@ -189,6 +189,19 @@
                 <div class="chips"><span>Automation</span><span>Webhooks</span><span>CRM</span></div>
               </div>
             </button>
+            <button type="button" class="project-slide"
+              data-images="assets/img/projects/webinar-series-1.svg, assets/img/projects/webinar-series-2.svg, assets/img/projects/webinar-series-3.svg"
+              data-title="Landing Page - Webinar Series"
+              data-role="WordPress Developer"
+              data-description="WordPress Landing Page with Beaver Builder"
+              data-link="https://newskyconsulting.com.au/webinar-series/"
+              data-tags="WordPress, WordPress Landing Page, Beaver Builder">
+              <img src="assets/img/projects/webinar-series-1.svg" alt="Landing Page - Webinar Series" loading="lazy">
+              <div class="project-slide-info">
+                <h3>Landing Page - Webinar Series</h3>
+                <div class="chips"><span>WordPress</span><span>Beaver Builder</span></div>
+              </div>
+            </button>
           </div>
           <button type="button" class="carousel-btn next" aria-label="Next project">›</button>
         </div>
@@ -262,11 +275,18 @@
     <div class="modal-backdrop" data-close></div>
     <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <button type="button" class="modal-close" data-close aria-label="Close">✕</button>
-      <img class="modal-image" id="modal-image" src="" alt="">
-      <div class="modal-body">
-        <h3 id="modal-title"></h3>
-        <p id="modal-description"></p>
-        <div class="chips" id="modal-tags"></div>
+      <div class="modal-grid">
+        <div class="modal-info">
+          <h3 id="modal-title"></h3>
+          <p class="modal-role" id="modal-role"></p>
+          <p id="modal-description"></p>
+          <a id="modal-link" class="modal-link" href="" target="_blank" rel="noopener">Visit project ↗</a>
+          <div class="modal-skills">
+            <p class="modal-subheading">Skills & deliverables</p>
+            <div class="chips" id="modal-tags"></div>
+          </div>
+        </div>
+        <div class="modal-gallery" id="modal-gallery"></div>
       </div>
     </div>
   </div>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1300" viewBox="0 0 900 1300">
+  <defs>
+    <linearGradient id="wg3" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#6d28d9"/>
+      <stop offset="1" stop-color="#181022"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1300" fill="url(#wg3)"/>
+  <circle cx="780" cy="180" r="180" fill="#ffffff" opacity="0.06"/>
+  <circle cx="130" cy="1120" r="200" fill="#ffffff" opacity="0.06"/>
+  <rect x="60" y="60" width="780" height="1180" rx="18" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="10 10"/>
+  <text x="50%" y="46%" fill="#ffffff" font-family="Inter, system-ui, sans-serif" font-size="40" font-weight="800" text-anchor="middle" dominant-baseline="middle" letter-spacing="-1">Landing Page</text>
+  <text x="50%" y="53%" fill="#e4d9ff" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="600" text-anchor="middle" dominant-baseline="middle" letter-spacing=".08em">PRICING &amp; HOST BIO</text>
+  <text x="50%" y="94%" fill="#c4b5fd" font-family="Inter, system-ui, sans-serif" font-size="15" text-anchor="middle" dominant-baseline="middle">Placeholder — swap with real screenshot 3 of 3</text>
+</svg>
