@@ -21,23 +21,47 @@ nextBtn?.addEventListener("click", () => {
 });
 
 const modal = document.querySelector("#project-modal");
-const modalImage = document.querySelector("#modal-image");
+const modalGallery = document.querySelector("#modal-gallery");
 const modalTitle = document.querySelector("#modal-title");
+const modalRole = document.querySelector("#modal-role");
 const modalDescription = document.querySelector("#modal-description");
+const modalLink = document.querySelector("#modal-link");
 const modalTags = document.querySelector("#modal-tags");
 let lastFocusedSlide = null;
 
 function openProjectModal(slide) {
-  modalImage.src = slide.dataset.image;
-  modalImage.alt = slide.dataset.title;
+  const images = slide.dataset.images
+    ? slide.dataset.images.split(",").map(src => src.trim())
+    : [slide.dataset.image];
+
   modalTitle.textContent = slide.dataset.title;
+  modalRole.textContent = slide.dataset.role || "";
+  modalRole.hidden = !slide.dataset.role;
   modalDescription.textContent = slide.dataset.description;
+
+  if (slide.dataset.link) {
+    modalLink.href = slide.dataset.link;
+  } else {
+    modalLink.removeAttribute("href");
+  }
+
+  modalGallery.innerHTML = "";
+  images.forEach((src, i) => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = `${slide.dataset.title} — image ${i + 1}`;
+    img.loading = "lazy";
+    modalGallery.appendChild(img);
+  });
+  modalGallery.scrollLeft = 0;
+
   modalTags.innerHTML = "";
   slide.dataset.tags.split(",").forEach(tag => {
     const chip = document.createElement("span");
     chip.textContent = tag.trim();
     modalTags.appendChild(chip);
   });
+
   lastFocusedSlide = slide;
   modal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
