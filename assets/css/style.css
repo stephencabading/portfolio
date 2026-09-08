@@ -82,11 +82,11 @@ pre { margin: 0; padding: 30px; overflow: auto; font-size: 14px; line-height: 1.
 .modal { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 24px; visibility: hidden; opacity: 0; transition: opacity .2s, visibility .2s; }
 .modal[aria-hidden="false"] { visibility: visible; opacity: 1; }
 .modal-backdrop { position: absolute; inset: 0; background: rgba(17,17,17,.72); backdrop-filter: blur(4px); }
-.modal-dialog { position: relative; width: min(100%, 1080px); max-height: 85vh; overflow: hidden; background: var(--card); border-radius: 16px; box-shadow: 0 30px 80px rgba(0,0,0,.3); }
+.modal-dialog { position: relative; width: min(100%, 1080px); height: 85vh; overflow: hidden; background: var(--card); border-radius: 16px; box-shadow: 0 30px 80px rgba(0,0,0,.3); }
 .modal-close { position: absolute; top: 14px; right: 14px; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); font-size: 15px; cursor: pointer; z-index: 2; }
 .modal-close:hover { background: var(--accent); color: white; border-color: var(--accent); }
-.modal-grid { display: grid; grid-template-columns: 1fr 3fr; max-height: 85vh; }
-.modal-info { padding: 32px 28px; overflow-y: auto; border-right: 1px solid var(--line); }
+.modal-grid { display: grid; grid-template-columns: 1fr 3fr; height: 100%; min-height: 0; }
+.modal-info { padding: 32px 28px; overflow-y: auto; min-height: 0; border-right: 1px solid var(--line); }
 .modal-info h3 { margin-top: 0; font-size: 21px; }
 .modal-role { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; margin: -8px 0 16px; }
 .modal-info > p:not(.modal-role) { color: var(--muted); }
@@ -94,8 +94,8 @@ pre { margin: 0; padding: 30px; overflow: auto; font-size: 14px; line-height: 1.
 .modal-link:hover { text-decoration: underline; }
 .modal-link:not([href]), .modal-link[href=""] { display: none; }
 .modal-subheading { font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 26px 0 10px; }
-.modal-gallery { display: flex; gap: 16px; overflow-x: auto; padding: 24px; scroll-snap-type: x mandatory; background: #f3f2ef; }
-.modal-gallery img { flex: 0 0 auto; height: 100%; max-height: calc(85vh - 48px); width: auto; max-width: 90%; object-fit: contain; border-radius: 10px; scroll-snap-align: start; background: #fff; box-shadow: 0 6px 20px rgba(0,0,0,.08); }
+.modal-gallery { display: flex; flex-direction: column; gap: 16px; overflow-y: auto; overflow-x: hidden; min-height: 0; padding: 24px; scroll-snap-type: y proximity; background: #f3f2ef; }
+.modal-gallery img { flex: 0 0 auto; width: 100%; height: auto; object-fit: contain; border-radius: 10px; scroll-snap-align: start; background: #fff; box-shadow: 0 6px 20px rgba(0,0,0,.08); }
 .dark-section { background: var(--dark); color: white; }
 .dark-section .section-heading > p:last-child, .dark-section .service p { color: #a7a7a7; }
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #333; border: 1px solid #333; }
@@ -121,11 +121,10 @@ footer { border-top: 1px solid var(--line); padding: 25px 0; font-size: 12px; co
   .work-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr 1fr; }
   .carousel-btn { display: none; }
-  .modal-dialog { max-height: 92vh; }
-  .modal-grid { grid-template-columns: 1fr; grid-template-rows: auto 1fr; max-height: 92vh; }
-  .modal-info { border-right: 0; border-bottom: 1px solid var(--line); }
-  .modal-gallery { max-height: 45vh; padding: 16px; }
-  .modal-gallery img { max-height: calc(45vh - 32px); max-width: 85%; }
+  .modal-dialog { height: 92vh; }
+  .modal-grid { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+  .modal-info { max-height: 45vh; border-right: 0; border-bottom: 1px solid var(--line); }
+  .modal-gallery { padding: 16px; }
   nav { display: none; position: absolute; left: 20px; right: 20px; top: 65px; padding: 20px; background: white; border: 1px solid var(--line); border-radius: 12px; flex-direction: column; align-items: stretch; }
   nav.open { display: flex; }
   .menu-toggle { display: block; }
