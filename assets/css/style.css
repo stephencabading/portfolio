@@ -70,12 +70,12 @@ pre { margin: 0; padding: 30px; overflow: auto; font-size: 14px; line-height: 1.
 .carousel { position: relative; }
 .carousel-track { display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 2px 2px 14px; margin: 0 -2px; scrollbar-width: none; }
 .carousel-track::-webkit-scrollbar { display: none; }
-.project-slide { flex: 0 0 300px; scroll-snap-align: start; display: block; text-align: left; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; padding: 0; font: inherit; color: inherit; cursor: pointer; transition: transform .2s, box-shadow .2s; }
+.project-slide { flex: 0 0 300px; scroll-snap-align: start; display: flex; flex-direction: column; text-align: left; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; padding: 0; font: inherit; color: inherit; cursor: pointer; transition: transform .2s, box-shadow .2s; }
 .project-slide:hover, .project-slide:focus-visible { transform: translateY(-4px); box-shadow: 0 18px 45px rgba(0,0,0,.07); }
-.project-slide img { display: block; width: 100%; height: 170px; object-fit: cover; background: #eee; }
+.project-slide img { display: block; width: 100%; height: 170px; object-fit: cover; object-position: top; background: #eee; }
 .project-slide-info { padding: 20px; }
 .project-slide-info h3 { margin: 0 0 12px; font-size: 18px; }
-.carousel-btn { position: absolute; top: 76px; width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); font-size: 20px; line-height: 1; cursor: pointer; z-index: 2; box-shadow: 0 8px 20px rgba(0,0,0,.08); }
+.carousel-btn { position: absolute; top: 45%; width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line); background: var(--card); font-size: 20px; line-height: 1; cursor: pointer; z-index: 2; box-shadow: 0 8px 20px rgba(0,0,0,.08); }
 .carousel-btn:hover { background: var(--accent); color: white; border-color: var(--accent); }
 .carousel-btn.prev { left: -21px; }
 .carousel-btn.next { right: -21px; }
