@@ -105,6 +105,18 @@ pre { margin: 0; padding: 30px; overflow: auto; font-size: 14px; line-height: 1.
 .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 100px; }
 .about-grid > div:last-child { color: var(--muted); font-size: 17px; }
 .stack-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.testimonials { margin-top: 90px; }
+.testimonials > .eyebrow { margin-bottom: 24px; }
+.testimonial-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; }
+.testimonial-card { flex: 1 1 320px; max-width: 420px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 22px; transition: transform .2s, box-shadow .2s; }
+.testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 18px 45px rgba(0,0,0,.07); }
+.stars { color: #f5b400; font-size: 13px; letter-spacing: 2px; white-space: nowrap; }
+.testimonial-card .quote { margin: 0; color: var(--text); font-size: 15px; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; margin-top: auto; }
+.testimonial-author > div:not(.avatar) { flex: 1; }
+.testimonial-author strong { display: block; font-size: 14px; }
+.testimonial-author small { color: var(--muted); font-size: 12px; }
+.avatar { flex: 0 0 40px; width: 40px; height: 40px; border-radius: 50%; background: var(--accent); color: white; display: grid; place-items: center; font-size: 13px; font-weight: 700; }
 .contact-section { padding: 100px 0; }
 .contact-box { text-align: center; padding: 80px 25px; background: #eae8e2; border-radius: 20px; }
 .contact-box h2 { max-width: 700px; margin: auto; }
